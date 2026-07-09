@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "ba23ff6b-e06b-4ad8-b74c-d857dd8b8b98",
+  "name": "laugh.wav",
+  "symbol": "sound_laugh_wav",
+  "type": "wav",
+  "filename": "laugh.wav"
+}
