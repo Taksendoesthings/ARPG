@@ -1,0 +1,228 @@
+{
+  "version": "4.2.0-e34",
+  "fields": [
+	{
+      "key": "INPUT_ISOMETRIC_INTERACT",
+      "sceneType": "ISOMETRIC",
+      "label": "FIELD_INPUT_INTERACT",
+      "description": "FIELD_INPUT_INTERACT_DESC",
+      "group": "Isometric",
+      "type": "togglebuttons",
+      "options": [
+        ["INPUT_A", "A"],
+        ["INPUT_B", "B"]
+      ],
+      "cType": "define",
+      "defaultValue": "INPUT_A"
+    },
+	{
+      "key": "ISOMETRIC_ANGLE",
+      "sceneType": "ISOMETRIC",
+      "label": "Movement angle",
+      "description": "FIELD_GRID_SIZE_DESC",
+      "group": "Isometric",
+      "type": "select",
+      "options": [
+		  [0, "Angle 45"],
+		  [1, "Angle 22.5"]
+		],
+      "cType": "define",
+      "defaultValue": 0
+    },
+	{
+      "key": "IS_MIRRORED",
+      "sceneType": "ISOMETRIC",
+      "label": "Mirrored controls",
+      "description": "FIELD_GRID_SIZE_DESC",
+      "group": "Isometric",
+      "type": "select",
+      "options": [
+        [0, "No"],
+		[1 ,"Yes"]
+      ],
+      "cType": "define",
+      "defaultValue": 0
+    }
+  ],
+    "sceneTypes": [
+    {
+      "key": "ISOMETRIC",
+      "label": "Isometric",
+      "files": ["include/states/isometric.h", "src/states/isometric.c"],
+      "extraActorCollisionFlags": [
+        {
+          "key": "solid",
+          "label": "FIELD_IS_SOLID",
+          "description": "FIELD_IS_SOLID_DESC",
+          "setFlag": "solid"
+        }
+      ],
+      "collisionTiles": [
+		  {
+			"key": "solid",
+			"color": "#FA2828FF",
+			"mask": 31,
+			"flag": 15,
+			"name": "FIELD_SOLID",
+			"icon": "FFFFFFFFFFFFFFFF"
+		  },
+		  {
+			"key": "top",
+			"color": "#2828FAFF",
+			"mask": 31,
+			"flag": 1,
+			"name": "FIELD_COLLISION_TOP",
+			"icon": "FFFFFF0000000000",
+			"multi": true
+		  },
+		  {
+			"key": "bottom",
+			"color": "#FFFA28FF",
+			"mask": 31,
+			"flag": 2,
+			"name": "FIELD_COLLISION_BOTTOM",
+			"icon": "0000000000FFFFFF",
+			"multi": true
+		  },
+		  {
+			"key": "left",
+			"color": "#FA28FAFF",
+			"mask": 31,
+			"flag": 4,
+			"name": "FIELD_COLLISION_LEFT",
+			"icon": "E0E0E0E0E0E0E0E0",
+			"multi": true
+		  },
+		  {
+			"key": "right",
+			"color": "#28FAFAFF",
+			"mask": 31,
+			"flag": 8,
+			"name": "FIELD_COLLISION_RIGHT",
+			"icon": "0707070707070707",
+			"multi": true
+		  },
+		  {
+			"key": "slope_45_right",
+			"color": "#0000FFFF",
+			"mask": 240,
+			"flag": 32,
+			"name": "FIELD_COLLISION_SLOPE_45_RIGHT",
+			"icon": "0103070F1F3F7FFF",
+			"extra": 10,
+			"group": "slope"
+		  },
+		  {
+			"key": "slope_45_left",
+			"color": "#0000FFFF",
+			"mask": 240,
+			"flag": 48,
+			"name": "FIELD_COLLISION_SLOPE_45_LEFT",
+			"icon": "80C0E0F0F8FCFEFF",
+			"extra": 6,
+			"group": "slope"
+		  },
+		  {
+			"key": "slope_22_right_bot",
+			"color": "#0000FFFF",
+			"mask": 240,
+			"flag": 64,
+			"name": "FIELD_COLLISION_SLOPE_22_RIGHT_BOT",
+			"icon": "00000000030F3FFF",
+			"extra": 2,
+			"group": "slope"
+		  },
+		  {
+			"key": "slope_22_right_top",
+			"color": "#0000FFFF",
+			"mask": 240,
+			"flag": 96,
+			"name": "FIELD_COLLISION_SLOPE_22_RIGHT_TOP",
+			"icon": "030F3FFF00000000",
+			"extra": 10,
+			"group": "slope"
+		  },
+		  {
+			"key": "slope_22_left_top",
+			"color": "#0000FFFF",
+			"mask": 240,
+			"flag": 112,
+			"name": "FIELD_COLLISION_SLOPE_22_LEFT_TOP",
+			"icon": "C0F0FCFF00000000",
+			"extra": 6,
+			"group": "slope"
+		  },
+		  {
+			"key": "slope_22_left_bot",
+			"color": "#0000FFFF",
+			"mask": 240,
+			"flag": 80,
+			"name": "FIELD_COLLISION_SLOPE_22_LEFT_BOT",
+			"icon": "00000000C0F0FCFF",
+			"extra": 2,
+			"group": "slope"
+		  },
+		  {
+			"key": "inv_slope_45_right",
+			"color": "#FF00FFFF",
+			"mask": 240,
+			"flag": 128,
+			"name": "FIELD_COLLISION_INV_SLOPE_45_RIGHT",
+			"icon": "FFFEFCF8F0E0C080",
+			"extra": 10,
+			"group": "slope_inv"
+		  },
+		  {
+			"key": "inv_slope_45_left",
+			"color": "#FF00FFFF",
+			"mask": 240,
+			"flag": 144,
+			"name": "FIELD_COLLISION_INV_SLOPE_45_LEFT",
+			"icon": "FF7F3F1F0F070301",
+			"extra": 6,
+			"group": "slope_inv"
+		  },
+		  {
+			"key": "inv_slope_22_right_bot",
+			"color": "#FF00FFFF",
+			"mask": 240,
+			"flag": 160,
+			"name": "FIELD_COLLISION_INV_SLOPE_22_RIGHT_BOT",
+			"icon": "FFFCF0C000000000",
+			"extra": 2,
+			"group": "slope_inv"
+		  },
+		  {
+			"key": "inv_slope_22_right_top",
+			"color": "#FF00FFFF",
+			"mask": 240,
+			"flag": 192,
+			"name": "FIELD_COLLISION_INV_SLOPE_22_RIGHT_TOP",
+			"icon": "00000000FFFCF0C0",
+			"extra": 10,
+			"group": "slope_inv"
+		  },
+		  {
+			"key": "inv_slope_22_left_top",
+			"color": "#FF00FFFF",
+			"mask": 240,
+			"flag": 208,
+			"name": "FIELD_COLLISION_INV_SLOPE_22_LEFT_TOP",
+			"icon": "00000000FF3F0F03",
+			"extra": 6,
+			"group": "slope_inv"
+		  },
+		  {
+			"key": "inv_slope_22_left_bot",
+			"color": "#FF00FFFF",
+			"mask": 240,
+			"flag": 176,
+			"name": "FIELD_COLLISION_INV_SLOPE_22_LEFT_BOT",
+			"icon": "FF3F0F0300000000",
+			"extra": 2,
+			"group": "slope_inv"
+		  }
+		]
+    }
+  ]
+}

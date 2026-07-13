@@ -12,7 +12,16 @@
   "backgroundId": "f8b1c7ad-7bb2-44b2-8189-175ae8698f11",
   "tilesetId": "",
   "colorModeOverride": "none",
-  "paletteIds": [],
+  "paletteIds": [
+    "cd18b088-8b85-446c-be4d-43b571d114c4",
+    "444c886c-6214-48d7-8e3c-4dca4f65dec7",
+    "549f44a4-01fe-4162-87f3-e020a730e545",
+    "6bd1a37f-d0cd-42b6-a718-e488320a3d0c",
+    "6bd1a37f-d0cd-42b6-a718-e488320a3d0c",
+    "6bd1a37f-d0cd-42b6-a718-e488320a3d0c",
+    "6bd1a37f-d0cd-42b6-a718-e488320a3d0c",
+    "default-ui"
+  ],
   "spritePaletteIds": [],
   "autoFadeSpeed": 1,
   "script": [
